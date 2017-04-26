@@ -1,0 +1,15 @@
+<resources>
+
+    <dimen name="smallText">36sp</dimen>
+    <dimen name="mediumText">56sp</dimen>
+    <dimen name="largeText">112sp</dimen>
+
+    <dimen name="padding">36dp</dimen>
+    <dimen name="margin">28dp</dimen>
+
+    <dimen name="buttonHeight">96dp</dimen>
+
+    <dimen name="playerLine">250dp</dimen>
+    <dimen name="bottomLine">500dp</dimen>
+
+</resources>

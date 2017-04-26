@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.example.android.darts_score_tracker.MainActivity">
+
+    <LinearLayout android:id="@+id/Scores"
+        style="@style/scoreBoardLayout">
+        <LinearLayout android:id="@+id/playerOne"
+            style="@style/player1ScoreLayout">
+            <TextView
+                android:text="@string/playerOne"
+                style="@style/playerTextView" />
+            <View
+                style="@style/playerLine">
+            </View>
+            <TextView android:id="@+id/p1Score"
+                android:textColor="@color/colorDartRed"
+                style="@style/playerScore" />
+            <LinearLayout
+                style="@style/simpleLayout">
+                <TextView android:id="@+id/p1d1"
+                    android:text="@string/D1"
+                    android:textColor="@color/colorDartRed"
+                    style="@style/dartScore" />
+                <TextView android:id="@+id/p1d2"
+                    android:text="@string/D2"
+                    android:textColor="@color/colorDartRed"
+                    style="@style/dartScore" />
+                <TextView android:id="@+id/p1d3"
+                    android:text="@string/D3"
+                    android:textColor="@color/colorDartRed"
+                    style="@style/dartScore" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            style="@style/dividerLine">
+        </View>
+
+        <LinearLayout android:id="@+id/playerTwo"
+            style="@style/player2ScoreLayout">
+            <TextView
+                android:text="@string/playerTwo"
+                style="@style/playerTextView" />
+            <View
+                style="@style/playerLine">
+            </View>
+            <TextView android:id="@+id/p2Score"
+                android:textColor="@color/colorButtonDarkGreen"
+                style="@style/playerScore" />
+            <LinearLayout
+                style="@style/simpleLayout">
+                <TextView android:id="@+id/p2d1"
+                    android:text="@string/D1"
+                    android:textColor="@color/colorButtonDarkGreen"
+                    style="@style/dartScore" />
+                <TextView android:id="@+id/p2d2"
+                    android:text="@string/D2"
+                    android:textColor="@color/colorButtonDarkGreen"
+                    style="@style/dartScore" />
+                <TextView android:id="@+id/p2d3"
+                    android:text="@string/D3"
+                    android:textColor="@color/colorButtonDarkGreen"
+                    style="@style/dartScore" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/calVal"
+        android:layout_below="@id/Scores"
+        style="@style/simpleLayout">
+        <TextView android:id="@+id/calculatorValue"
+            style="@style/calculatorValue"/>
+        <TextView
+            style="@style/blankText" />
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/calValLine"
+        android:layout_below="@id/calVal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        style="@style/simpleLayout">
+        <View
+            android:layout_weight="2"
+            android:background="@android:color/black"
+            style="@style/simpleLine">
+        </View>
+        <View
+            android:layout_weight="1"
+            style="@style/simpleLine">
+        </View>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonLayout" >
+        <LinearLayout
+            style="@style/calWeightTwo">
+            <Button android:id="@+id/One"
+                android:text="@string/one"
+                android:onClick="inputOne"
+                style="@style/smallButtons"/>
+            <Button android:id="@+id/Four"
+                android:text="@string/four"
+                android:onClick="inputFour"
+                style="@style/smallButtons"/>
+            <Button android:id="@+id/Seven"
+                android:text="@string/seven"
+                android:onClick="inputSeven"
+                style="@style/smallButtons"/>
+            <Button android:id="@+id/TwentyFive"
+                android:text="@string/twentyFive"
+                android:onClick="inputTwentyFive"
+                style="@style/smallButtonsGreen"/>
+            <Button android:id="@+id/Fifty"
+                android:text="@string/fifty"
+                android:onClick="inputFifty"
+                style="@style/smallButtonsRed" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/calWeightTwo">
+            <Button android:id="@+id/Two"
+                android:text="@string/two"
+                android:onClick="inputTwo"
+                style="@style/smallButtons"/>
+            <Button android:id="@+id/Five"
+                android:text="@string/five"
+                android:onClick="inputFive"
+                style="@style/smallButtons"/>
+            <Button android:id="@+id/Eight"
+                android:text="@string/eight"
+                android:onClick="inputEight"
+                style="@style/smallButtons"/>
+            <Button android:id="@+id/Zero"
+                android:text="@string/zero"
+                android:onClick="inputZero"
+                style="@style/smallButtons"/>
+            <Button android:id="@+id/Cancel"
+                android:text="@string/Cancel"
+                android:onClick="cancelDartScore"
+                style="@style/smallButtons" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/calWeightTwo">
+            <Button android:id="@+id/Three"
+                android:text="@string/three"
+                android:onClick="inputThree"
+                style="@style/smallButtons"/>
+            <Button android:id="@+id/Six"
+                android:text="@string/six"
+                android:onClick="inputSix"
+                style="@style/smallButtons"/>
+            <Button android:id="@+id/Nine"
+                android:text="@string/nine"
+                android:onClick="inputNine"
+                style="@style/smallButtons" />
+            <Button android:id="@+id/Double"
+                android:text="@string/doublePoints"
+                android:onClick="doubleDartScore"
+                style="@style/smallButtonsGreen"/>
+            <Button android:id="@+id/Triple"
+                android:text="@string/triplePoints"
+                android:onClick="tripleDartScore"
+                style="@style/smallButtonsRed" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/calWeightThree">
+            <Button android:id="@+id/firstDart"
+                android:text="@string/dart1"
+                style="@style/mediumButtonsRed" />
+            <Button android:id="@+id/secondDart"
+                android:text="@string/dart2"
+                style="@style/mediumButtonsRed" />
+            <Button android:id="@+id/thirdDart"
+                android:text="@string/dart3"
+                style="@style/mediumButtonsRed" />
+            <Button android:id="@+id/confirmButton"
+                android:text="@string/confirm"
+                style="@style/mediumButtonsGreen" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/bottomButtons"
+        style="@style/bottomLayout" >
+        <Button android:id="@+id/reset"
+            android:text="@string/resetGame"
+            style="@style/bottomButtonRed" />
+        <Button android:id="@+id/nextPlayer"
+            android:text="@string/nextPlayer"
+            style="@style/bottomButtonGreen" />
+    </LinearLayout>
+
+    <View android:id="@+id/bottomLine"
+        style="@style/bottomLine" >
+    </View>
+</RelativeLayout>
